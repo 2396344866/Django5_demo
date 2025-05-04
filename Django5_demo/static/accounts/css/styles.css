@@ -1,0 +1,455 @@
+/* 设置全局body样式，适用于login.html和register.html中的<body>标签 */
+body {
+    /* 设置字体为Segoe UI，若没有则使用无衬线字体 */
+    font-family: 'Segoe UI', sans-serif;
+    /* 设置背景为渐变背景，从#f5f7fa到#c3cfe2 */
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /* 设置最小高度为视口高度，确保内容能填满屏幕 */
+    min-height: 100vh;
+    /* 使用flex布局 */
+    display: flex;
+    /* 垂直居中 */
+    align-items: center;
+    /* 水平居中 */
+    justify-content: center;
+    /* 去除默认外边距 */
+    margin: 0;
+    /* 设置内边距为20px */
+    padding: 20px;
+}
+
+/* 设置卡片样式，对应login.html和register.html中的<div class="card">标签 */
+.card {
+    /* 设置宽度为100% */
+    width: 100%;
+    /* 设置最大宽度为800px */
+    max-width: 800px;
+    /* 上下外边距20px，左右自动居中 */
+    margin: 20px auto;
+    /* 设置圆角为12px */
+    border-radius: 12px;
+    /* 设置阴影 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    /* 设置阴影为0.5rem */
+    transition: all 0.3s ease;
+}
+.card:hover {
+    /* 鼠标悬停时，设置阴影 */
+    transform: translateY(-8px);
+    /* 设置阴影 */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+/* 设置卡片头部样式，对应login.html和register.html中的<div class="card-header">标签 */
+.card-header {
+    /* 设置背景为渐变背景，从#0062cc到#004085，使用!important确保优先级 */
+    background: linear-gradient(135deg, #0062cc 0%, #004085 100%) !important;
+    /* 设置内边距上下2.5rem，左右3rem，使用!important确保优先级 */
+    padding: 2.5rem 3rem !important;
+    /* 设置圆角，左上角和右上角为1.5rem，左下角和右下角为0，使用!important确保优先级 */
+    border-radius: 1.5rem 1.5rem 0 0 !important;
+}
+
+/* 设置卡片头部标题样式，对应login.html和register.html中的<h2>标签，在<div class="card-header">内 */
+.card-header h2 {
+    /* 文本居中 */
+    text-align: center;
+    /* 宽度为100% */
+    width: 100%;
+    /* 设置字体大小为2.5rem */
+    font-size: 2.5rem;
+    /* 设置字母间距为1px */
+    letter-spacing: 1px;
+}
+
+/* 设置卡片主体样式，对应login.html和register.html中的<div class="card-body">标签 */
+.card-body {
+    /* 设置内边距为3rem，使用!important确保优先级 */
+    padding: 3rem !important;
+}
+
+/* 设置卡片主体内子元素样式，对应login.html和register.html中<div class="card-body">内的所有子元素 */
+.card-body > * {
+    /* 设置最大宽度为600px */
+    max-width: 600px;
+    /* 上下外边距0，左右自动居中 */
+    margin: 0 auto;
+    /* 设置宽度为100% */
+    width: 100%;
+}
+
+/* 设置卡片主体内表单行样式，对应login.html和register.html中<form>内的<div class="row">标签 */
+.card-body form > .row {
+    /* 使用flex布局 */
+    display: flex;
+    /* 水平居中 */
+    justify-content: center;
+    /* 垂直居中 */
+    align-items: center;
+    /* 允许子元素换行 */
+    flex-wrap: wrap;
+}
+
+/* 设置卡片主体内有mb-4类的元素样式，对应login.html和register.html中<div class="mb-4">标签 */
+.card-body .mb-4 {
+    /* 设置宽度为100% */
+    width: 100%;
+    /* 显示为块级元素，使用!important确保优先级 */
+    display: block !important;
+    /* 设置底部外边距为3rem，使用!important确保优先级 */
+    margin-bottom: 3rem !important;
+}
+
+/* 设置卡片主体内有justify-content-center类的行样式，对应login.html和register.html中<div class="row justify-content-center">标签 */
+.card-body .row.justify-content-center {
+    /* 设置最大宽度为700px，使用!important确保优先级 */
+    max-width: 700px !important;
+}
+
+/* 设置卡片主体内有justify-content-center类的行内列样式，对应login.html和register.html中<div class="row justify-content-center">内以col-开头的类的元素 */
+.card-body .row.justify-content-center > [class^="col-"] {
+    /* 设置最大宽度为100% */
+    max-width: 100%;
+    /* 设置左右内边距为24px */
+    padding: 0 24px;
+    /* 设置左右外边距为0.5rem */
+    margin: 0 0.5rem;
+    /* 不允许子元素伸缩 */
+    flex: 0 0 auto;
+    /* 宽度自动 */
+    width: auto;
+}
+
+/* 设置卡片主体内有align-items-center类的行样式，对应login.html和register.html中<div class="row align-items-center">标签 */
+.card-body .row.align-items-center {
+    /* 使用flex布局，使用!important确保优先级 */
+    display: flex !important;
+    /* 垂直居中，使用!important确保优先级 */
+    align-items: center !important;
+    /* 水平居中，使用!important确保优先级 */
+    justify-content: center !important;
+    /* 上下外边距为0和1.5rem，左右自动居中，使用!important确保优先级 */
+    margin: 0 auto 1.5rem !important;
+    /* 设置宽度为100% */
+    width: 100%;
+}
+
+/* 设置卡片主体内有align-items-center类的行内表单标签列样式，对应login.html和register.html中<div class="row align-items-center">内的<div class="col-form-label">标签 */
+.card-body .row.align-items-center > .col-form-label {
+    /* 占据25%的宽度，使用!important确保优先级 */
+    flex: 0 0 25% !important;
+    /* 最大宽度为25%，使用!important确保优先级 */
+    max-width: 25% !important;
+    /* 文本左对齐，使用!important确保优先级 */
+    text-align: left !important;
+    /* 设置右内边距为1.5rem，使用!important确保优先级 */
+    padding-right: 1.5rem !important;
+    /* 顶部对齐 */
+    align-self: flex-start;
+    /* 设置上内边距为0.5rem */
+    padding-top: 0.5rem;
+    /* 设置字体粗细为600 */
+    font-weight: 600;
+    /* 设置字体颜色为#2c3e50 */
+    color: #2c3e50;
+    /* 设置字体大小为15px */
+    font-size: 15px;
+    /* 设置底部外边距为0.5rem */
+    margin-bottom: 0.5rem;
+}
+
+/* 设置卡片主体内有align-items-center类的行内输入框列样式，对应login.html和register.html中<div class="row align-items-center">内的<div class="col-input">标签 */
+.card-body .row.align-items-center > .col-input {
+    /* 占据75%的宽度，使用!important确保优先级 */
+    flex: 0 0 75% !important;
+    /* 最大宽度为75%，使用!important确保优先级 */
+    max-width: 75% !important;
+    /* 设置底部内边距为1.5rem，使用!important确保优先级 */
+    padding-bottom: 1.5rem !important;
+    /* 设置定位为相对定位 */
+    position: relative;
+}
+
+/* 设置提交按钮样式，对应login.html和register.html中的<button type="submit">标签 */
+button[type="submit"] {
+    /* 显示为块级元素，使用!important确保优先级 */
+    display: block !important;
+    /* 上下外边距为3rem和0，左右自动居中，使用!important确保优先级 */
+    margin: 3rem auto 0 !important;
+    /* 设置最大宽度为400px，使用!important确保优先级 */
+    max-width: 400px !important;
+    /* 设置宽度为100% */
+    width: 100%;
+    /* 文本居中 */
+    text-align: center;
+    /* 设置背景为渐变背景，从#007BFF到#0062cc */
+    background: linear-gradient(to right, #007BFF, #0062cc);
+    /* 设置圆角为4px */
+    border-radius: 4px;
+    /* 设置字体粗细为500 */
+    font-weight: 500;
+    /* 设置字母间距为0.25px */
+    letter-spacing: 0.25px;
+    /* 设置背景颜色为#1a73e8 */
+    background: #1a73e8;
+    /* 不进行文本转换 */
+    text-transform: none;
+    /* 设置内边距上下12px，左右24px */
+    padding: 12px 24px;
+    /* 设置边框为0 */
+    position: relative;
+    /*  设置溢出为隐藏 */
+    overflow: hidden;
+    /* 设置字体颜色为#fff */
+    transition: all 0.3s ease;
+}
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 98, 204, 0.3);
+    background: linear-gradient(to left, #007BFF, #0062cc);
+}
+/* 添加悬停粒子效果 */
+button[type="submit"]::after {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 10%, transparent 10.01%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    border-radius: 50%;
+    pointer-events: none;
+}
+button[type="submit"]:hover::after {
+    transform: translate(-50%, -50%) scale(1.5);
+    opacity: 0;
+}
+
+/* 设置卡片主体内居中段落样式，对应login.html和register.html中<div class="card-body">内的<p class="text-center">标签 */
+.card-body p.text-center {
+    /* 文本居中，使用!important确保优先级 */
+    text-align: center !important;
+    /* 设置左右内边距为1rem */
+    padding: 0 1rem;
+}
+
+.card-body a {
+    color: #0062cc;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.card-body a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background: #0062cc;
+    transition: width 0.3s ease;
+}
+
+.card-body a:hover::after {
+    width: 100%;
+}
+
+.card-body a:hover {
+    color: #004085;
+}
+
+
+/* 当屏幕宽度大于769px时，设置卡片主体内居中段落样式 */
+@media (min-width: 769px) {
+    .card-body p.text-center {
+        /* 设置最大宽度为600px */
+        max-width: 600px;
+        /* 上下外边距0，左右自动居中 */
+        margin: 0 auto;
+    }
+}
+
+/* 当屏幕宽度小于等于768px时，设置卡片及相关元素样式 */
+@media (max-width: 768px) {
+    /* 对应login.html和register.html中的<div class="card">标签 */
+    .card {
+        /* 设置宽度为95% */
+        width: 95%;
+        /* 上下外边距1rem，左右自动居中 */
+        margin: 1rem auto;
+    }
+
+    /* 对应login.html和register.html中<div class="row align-items-center">内的<div class="col-form-label">标签 */
+    .card-body .row.align-items-center > .col-form-label {
+        /* 文本左对齐，使用!important确保优先级 */
+        text-align: left !important;
+        /* 设置右内边距为0，使用!important确保优先级 */
+        padding-right: 0 !important;
+        /* 占据100%的宽度，使用!important确保优先级 */
+        flex: 0 0 100% !important;
+        /* 最大宽度为100%，使用!important确保优先级 */
+        max-width: 100% !important;
+        /* 设置底部外边距为0.5rem */
+        margin-bottom: 0.5rem;
+    }
+
+    /* 对应login.html和register.html中<div class="row align-items-center">内的<div class="col-input">标签 */
+    .card-body .row.align-items-center > .col-input {
+        /* 占据100%的宽度，使用!important确保优先级 */
+        flex: 0 0 100% !important;
+        /* 最大宽度为100%，使用!important确保优先级 */
+        max-width: 100% !important;
+    }
+
+    /* 对应login.html和register.html中<div class="row justify-content-center">内以col-开头的类的元素 */
+    .card-body .row.justify-content-center > [class^="col-"] {
+        /* 设置宽度为95%，使用!important确保优先级 */
+        width: 95% !important;
+        /* 设置左右内边距为8px */
+        padding: 0 8px;
+    }
+
+    /* 对应login.html和register.html中<form>内的<div class="row">标签 */
+    .card-body .row {
+        /* 水平居中 */
+        justify-content: center;
+    }
+}
+
+/* 当屏幕宽度小于等于480px时，设置卡片及相关元素样式 */
+@media (max-width: 480px) {
+    /* 对应login.html和register.html中的<div class="card">标签 */
+    .card {
+        /* 设置宽度为100% */
+        width: 100%;
+        /* 外边距为0 */
+        margin: 0;
+        /* 圆角为0 */
+        border-radius: 0;
+        /* 去除阴影 */
+        box-shadow: none;
+    }
+
+    /* 对应login.html和register.html中<div class="row justify-content-center">内以col-开头的类的元素 */
+    .card-body .row.justify-content-center > [class^="col-"] {
+        /* 设置左右内边距为16px */
+        padding: 0 16px;
+    }
+}
+
+/* 当屏幕宽度大于等于1400px时，设置卡片及相关元素样式 */
+@media (min-width: 1400px) {
+    /* 对应login.html和register.html中的<div class="card">标签 */
+    .card {
+        /* 设置最大宽度为1200px */
+        max-width: 1200px;
+        /* 上下外边距为4rem，左右自动居中 */
+        margin: 4rem auto;
+    }
+
+    /* 对应login.html和register.html中的<div class="card-header">标签 */
+    .card-header {
+        /* 设置内边距上下2.5rem，左右3rem */
+        padding: 2.5rem 3rem;
+    }
+
+    /* 对应login.html和register.html中<div class="card-header">内的<h2>标签 */
+    .card-header h2 {
+        /* 设置字体大小为2.5rem */
+        font-size: 2.5rem;
+        /* 设置字母间距为1px */
+        letter-spacing: 1px;
+    }
+}
+
+/* 设置表单标签样式，对应login.html和register.html中的<label class="form-label">标签 */
+.form-label {
+    /* 设置字体粗细为600 */
+    font-weight: 600;
+    /* 设置字体颜色为#2c3e50 */
+    color: #2c3e50;
+    /* 设置字体大小为15px */
+    font-size: 15px;
+    /* 设置底部外边距为0.5rem */
+    margin-bottom: 0.5rem;
+}
+
+/* 设置表单输入框样式，对应login.html和register.html中的<input class="form-control">标签 */
+.form-control {
+    /* 设置高度为48px */
+    height: 48px;
+    /* 设置最大宽度为600px */
+    max-width: 600px;
+    /* 设置宽度为100% */
+    width: 100%;
+    /* 设置内边距上下12px，左右16px */
+    padding: 12px 16px;
+    /* 设置边框为1px的#ccc颜色 */
+    border: 1px solid #ccc;
+    /* 设置圆角为4px */
+    border-radius: 4px;
+    /* 设置字体大小为16px */
+    font-size: 16px;
+    /* 设置过渡效果，所有属性变化0.2s*/
+    transition: all 0.2s ease;
+    /* 设置盒模型为border-box */
+    box-sizing: border-box;
+
+    background: linear-gradient(to right, #ffffff, #f9f9f9);
+
+
+}
+
+/* 设置表单输入框聚焦时的样式，对应login.html和register.html中的<input class="form-control">标签聚焦状态 */
+.form-control:focus {
+    /* 设置边框颜色为#0062cc */
+    border-color: #0062cc;
+    /* 设置阴影效果 */
+    box-shadow: 0 0 12px rgba(0, 98, 204, 0.35);
+    /* 背景渐变 */
+    background: linear-gradient(to right, #e8f3ff, #d9ecff);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+    }
+}
+/* 设置危险提示框样式，对应login.html和register.html中的<div class="alert alert-danger">标签 */
+.alert-danger {
+    /* 设置左边框为4px的#dc3545颜色 */
+    border-left: 4px solid #dc3545;
+    /* 设置圆角为0.75rem */
+    border-radius: 0.75rem;
+    /* 设置内边距为1rem */
+    padding: 1rem;
+    /* 设置背景颜色为#fff5f5 */
+    background: #fff5f5;
+    /* 设置过渡效果，所有属性变化0.2s */
+    animation: pulse 2s infinite;
+}
+
+/* 设置输入错误提示样式，对应login.html和register.html中的<div class="alert-input-error">标签 */
+.alert-input-error {
+    /* 设置定位为相对定位 */
+    position: relative;
+    /* 设置顶部外边距为0.5rem */
+    margin-top: 0.5rem;
+    /* 宽度自动 */
+    width: auto;
+    /* 左偏移为0 */
+    left: 0;
+    /* 设置层级为0 */
+    z-index: 0;
+}
+
+
+

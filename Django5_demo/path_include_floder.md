@@ -1,0 +1,70 @@
+├── .venv/
+├── Django_demo/
+  ├── __init__.py
+  ├── asgi.py
+  ├── settings.py
+  ├── urls.py
+  └── wsgi.py
+├── db.sqlite3
+├── doc/
+  ├── setting.md
+  ├── sqlite.md
+  └── terminal.md
+├── folder_to_md.py
+├── help.md
+├── manage.py
+├── path_include_floder.md
+├── phone/
+  ├── __init__.py
+  ├── admin.py
+  ├── apps.py
+  ├── forms.py
+  ├── help.md
+  ├── migrations/
+    ├── 0001_initial.py
+    ├── __init__.py
+  ├── models.py
+  ├── tests.py
+  ├── urls.py
+  └── views.py
+├── requirements.txt
+├── static/
+  ├── css/
+    └── styles.css
+  ├── images/
+    ├── phone_1.png
+    ├── phone_10.png
+    ├── phone_2.png
+    ├── phone_3.png
+    ├── phone_4.png
+    ├── phone_5.png
+    ├── phone_6.png
+    ├── phone_7.png
+    ├── phone_8.png
+    └── phone_9.png
+  └── js/
+    └── script.js
+├── templates/
+  ├── HTML_Help.md
+  ├── phone/
+    ├── analysis.html
+    ├── base.html
+    ├── list.html
+    ├── preference.html
+    ├── recommendation.html
+    ├── search.html
+    └── visualization.html
+  └── users/
+    ├── login.html
+    └── register.html
+└── users/
+  ├── __init__.py
+  ├── admin.py
+  ├── apps.py
+  ├── help.md
+  ├── migrations/
+    ├── __init__.py
+  ├── models.py
+  ├── tests.py
+  ├── urls.py
+  └── views.py

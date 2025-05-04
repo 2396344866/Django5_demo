@@ -1,0 +1,80 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'accounts/css/styles.css' %}">
+</head>
+<body class="d-flex align-items-center py-4 bg-light">
+    <div class="container">
+        <div class="card shadow-lg mx-auto">
+            <div class="card-header bg-primary text-white">
+                <h2 class="mb-0"><i class="bi bi-shield-lock me-2"></i>智能管理平台</h2>  <!-- 新增图标 -->
+            </div>
+            <div class="card-body p-4">
+                {% if form.errors %}
+                <div class="alert alert-danger mb-4 px-3 py-2 animate__animated animate__fadeIn">  <!-- 添加动画 -->
+                    用户名或密码不正确，请重试
+                </div>
+                {% endif %}
+                
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-3 text-end col-md-4 col-lg-3">
+                                <label class="form-label fw-semibold mb-0">
+                                    <i class="bi bi-person-circle me-1"></i>{{ form.username.label }}
+                                </label>
+                            </div>
+                            <div class="col-9 col-md-8 col-lg-9">
+                                {{ form.username|add_class:"form-control" }}  <!-- 移除mt-1 -->
+                                {% if form.username.errors %}
+                                <div class="alert-input-error mt-2 animate__animated animate__fadeIn">
+                                    {{ form.username.errors }}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-3 text-end col-md-4 col-lg-3">
+                                <label class="form-label fw-semibold mb-0">
+                                    <i class="bi bi-key me-1"></i>{{ form.password.label }}
+                                </label>
+                            </div>
+                            <div class="col-9 col-md-8 col-lg-9">
+                                {{ form.password|add_class:"form-control" }}
+                                {% if form.password.errors %}
+                                <div class="alert-input-error mt-2 animate__animated animate__fadeIn">
+                                    {{ form.password.errors }}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary hover-scale shadow-sm mt-4 py-3" type="submit">  <!-- 增加垂直内边距 -->
+                        <i class="bi bi-box-arrow-in-right me-2"></i>立即登录
+                    </button>
+
+
+                </form>
+
+                    <p class="mt-4 text-muted text-center">
+                        还没有注册？<a href="{% url 'register' %}" class="fw-semibold link-underline">
+                        创建新用户</a>
+                    </p>
+
+                    <p class="mt-4 text-muted text-center">
+                        是管理员？<a href="/admin/" class="fw-semibold link-underline">
+                        管理员登录</a>
+                    </p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

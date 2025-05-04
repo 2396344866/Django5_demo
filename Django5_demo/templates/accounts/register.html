@@ -1,0 +1,88 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'accounts/css/styles.css' %}">
+</head>
+<body class="d-flex align-items-center py-4 bg-light">
+    <div class="container">
+        <div class="card shadow-lg mx-auto">
+            <div class="card-header bg-primary text-white">
+                <h2 class="mb-0"><i class="bi bi-person-plus me-2"></i>用户注册</h2>  <!-- 优化标题 -->
+            </div>
+
+            <div class="card-body p-4">
+                <form method="post">  <!-- 新增表单标签 -->
+                    {% csrf_token %}  <!-- 新增CSRF令牌 -->
+                    {% if form.errors %}
+                    <div class="alert alert-danger mb-4 px-3 py-2 animate__animated animate__fadeIn">
+                        请修正以下错误
+                    </div>
+                    {% endif %}
+                    <div class="mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-form-label col-4 col-md-3 text-end">
+                                <label class="form-label fw-semibold mb-0">
+                                    <i class="bi bi-person-badge me-1"></i>{{ form.username.label }}
+                                </label>
+                            </div>
+                            <div class="col-input col-8 col-md-9">
+                                {{ form.username|add_class:"form-control" }}
+                                {% if form.username.errors %}
+                                <div class="alert-input-error mt-2 animate__animated animate__fadeIn">
+                                    {{ form.username.errors }}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-form-label col-4 col-md-3 text-end">
+                                <label class="form-label fw-semibold mb-0">
+                                    <i class="bi bi-lock me-1"></i>{{ form.password1.label }}
+                                </label>
+                            </div>
+                            <div class="col-input col-8 col-md-9">
+                                {{ form.password1|add_class:"form-control" }}
+                                {% if form.password1.errors %}
+                                <div class="alert-input-error mt-2 animate__animated animate__fadeIn">
+                                    {{ form.password1.errors }}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="row align-items-center">
+                            <div class="col-form-label col-4 col-md-3 text-end">
+                                <label class="form-label fw-semibold mb-0">
+                                    <i class="bi bi-lock me-1"></i>{{ form.password2.label }}
+                                </label>
+                            </div>
+                            <div class="col-input col-8 col-md-9" style="min-height: 60px;"> <!-- 调整最小高度 -->
+                                {{ form.password2|add_class:"form-control" }}
+                                {% if form.password2.errors %}
+                                <div class="alert-input-error mt-2 animate__animated animate__fadeIn">
+                                    {{ form.password2.errors }}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary hover-scale shadow-sm mt-5 py-3" type="submit">  <!-- mt-4改为mt-5 -->
+                        <i class="bi bi-person-check me-2"></i>立即注册
+                    </button>
+                </form>  
+                <p class="mt-5 text-center">  <!-- mt-4改为mt-5 -->
+                    你是否已经具备新用户？<a href="{% url 'login' %}" class="link-underline">返回登录</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

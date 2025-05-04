@@ -1,0 +1,30 @@
+/* 修改: 调整错误提示容器的定位方式 */
+.alert-input-error {
+    font-size: 0.875rem;
+    color: #dc3545;
+    background: #fff5f5;
+    border-left: 3px solid #dc3545;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    width: auto;
+    margin-top: 0.5rem;
+    position: relative; /* 修改为相对定位 */
+    left: 0;
+    top: 0;
+    z-index: 1;
+    box-shadow: none;
+}
+
+/* 增加表单行之间的间距 */
+.card-body .mb-4 {
+    margin-bottom: 2rem !important;
+}
+
+/* 确保按钮和链接有足够的空间 */
+button[type="submit"] {
+    margin-top: 2rem;
+}
+
+.card-body p.text-center {
+    margin-top: 2rem;
+}
